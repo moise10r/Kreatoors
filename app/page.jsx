@@ -67,6 +67,7 @@ export default function SliderForm() {
     <SlideOne nextSlide={nextSlide} />,
     <About />,
     <Preferences />,
+    <Content />,
   ];
 
   return (

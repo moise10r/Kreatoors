@@ -49,17 +49,17 @@ function SlideComplete() {
 }
 
 export default function SliderForm() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
 
   const nextSlide = () => {
     if (currentSlide < slides.length - 1) {
-      setCurrentSlide((prev) => prev + 1);
+      setCurrentSlide((prev: number) => prev + 1);
     }
   };
 
   const prevSlide = () => {
     if (currentSlide > 0) {
-      setCurrentSlide((prev) => prev - 1);
+      setCurrentSlide((prev: number) => prev - 1);
     }
   };
 

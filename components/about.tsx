@@ -37,7 +37,7 @@ export default function About() {
           onPointerEnterCapture={() => {}}
           onPointerLeaveCapture={() => {}}
         >
-          {roles.map((role, index) => (
+          {roles.map((role:string, index: number) => (
             <Option
               key={index}
               className={role.includes("Other") ? "font-semibold" : ""}

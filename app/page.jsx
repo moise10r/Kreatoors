@@ -70,6 +70,7 @@ export default function SliderForm() {
     <Content />,
     <Preferred />,
     <Goals />,
+    <SlideComplete />,
   ];
 
   return (

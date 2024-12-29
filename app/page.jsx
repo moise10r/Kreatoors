@@ -63,7 +63,11 @@ export default function SliderForm() {
     }
   };
 
-  const slides = [<SlideOne nextSlide={nextSlide} />, <About />];
+  const slides = [
+    <SlideOne nextSlide={nextSlide} />,
+    <About />,
+    <Preferences />,
+  ];
 
   return (
     <div className="flex h-[100vh]">

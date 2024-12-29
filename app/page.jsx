@@ -68,6 +68,7 @@ export default function SliderForm() {
     <About />,
     <Preferences />,
     <Content />,
+    <Preferred />,
   ];
 
   return (

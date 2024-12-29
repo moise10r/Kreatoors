@@ -31,7 +31,12 @@ export default function About() {
         What is your role within your company?
       </p>
       <div className="mb-10 text-xs">
-        <Select label="Select">
+        <Select
+          label="Select"
+          placeholder="Select a role"
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}
+        >
           {roles.map((role, index) => (
             <Option
               key={index}
@@ -45,7 +50,12 @@ export default function About() {
 
       <p className="mb-6">Which department do you belong to? </p>
       <div className="text-xs">
-        <Select label="Select">
+        <Select
+          label="Select"
+          placeholder="Select a department"
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}
+        >
           {departments.map((department, index) => (
             <Option
               key={index}

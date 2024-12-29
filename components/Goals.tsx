@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import { Checkbox } from "@material-tailwind/react";
 
+type CheckedStates = {
+  leadership: boolean;
+  visibility: boolean;
+  networking: boolean;
+  expertise: boolean;
+  opportunities: boolean;
+  other: boolean;
+};
+
 export default function Goals() {
-  const [checkedStates, setCheckedStates] = useState({
+  const [checkedStates, setCheckedStates] = useState<CheckedStates>({
     leadership: false,
     visibility: false,
     networking: false,
@@ -11,14 +20,14 @@ export default function Goals() {
     other: false,
   });
 
-  const handleChange = (key) => {
+  const handleChange = (key: keyof CheckedStates) => {
     setCheckedStates((prevState) => ({
       ...prevState,
       [key]: !prevState[key],
     }));
   };
 
-  const labels = [
+  const labels: { key: keyof CheckedStates; label: string }[] = [
     { key: "leadership", label: "Build Industry Thought Leadership" },
     { key: "visibility", label: "Increase Visibility on LinkedIn" },
     { key: "networking", label: "Network with Industry Peers" },
@@ -29,9 +38,11 @@ export default function Goals() {
 
   return (
     <div>
-      <h1 className="font-semibold mb-4 text-[24px]">Refine Your Personal Branding Goals</h1>
+      <h1 className="font-semibold mb-4 text-[24px]">
+        Refine Your Personal Branding Goals
+      </h1>
       <p className="mb-4 text-xs">
-        What would you like to achieve through personal branding? 
+        What would you like to achieve through personal branding?
       </p>
       <div className="text-xs space-y-4 flex flex-wrap items-center">
         {labels.map(({ key, label }) => (
@@ -50,6 +61,9 @@ export default function Goals() {
               checked={checkedStates[key]}
               onChange={() => handleChange(key)}
               className="checked:bg-[#6a67af] checked:border-[#6a67af]"
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+              crossOrigin={undefined}
             />
           </div>
         ))}

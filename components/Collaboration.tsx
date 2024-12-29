@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Checkbox, Textarea } from "@material-tailwind/react";
+import { Checkbox } from "@material-tailwind/react";
 
 export default function Collaboration() {
   const contentPreferences = [
@@ -28,6 +27,9 @@ export default function Collaboration() {
             id={`preference-${index}`}
             label={preference}
             ripple={true}
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
+            crossOrigin={undefined}
           />
         ))}
       </div>

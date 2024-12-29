@@ -7,7 +7,7 @@ import Content from "@/components/content";
 import Preferences from "@/components/Preferences";
 import Preferred from "@/components/Preferred";
 import Goals from "@/components/Goals";
-import CarouselNavigation from "@/components/caroucelle";
+import CarouselNavigation from "@/components/carousel";
 
 function SlideOne({ nextSlide }) {
   return (
